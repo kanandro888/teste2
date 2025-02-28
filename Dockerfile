@@ -1,5 +1,5 @@
-# Use a imagem oficial do .NET 6 SDK como base para build
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+# Use a imagem oficial do .NET 8 SDK como base para build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
 # Defina o diretório de trabalho
 WORKDIR /app
@@ -15,7 +15,7 @@ COPY . .
 RUN dotnet publish -c Release -o out
 
 # Use a imagem do .NET 6 Runtime para rodar a aplicação
-FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 
 # Defina o diretório de trabalho
 WORKDIR /app
