@@ -24,4 +24,4 @@ WORKDIR /app
 COPY --from=build /app/out .
 
 # Defina o comando para rodar a aplicação
-ENTRYPOINT ["dotnet", "HelloWorldAPI.dll"]
+ENTRYPOINT ["dotnet", "hello_world.dll"]
